@@ -17,26 +17,25 @@
             <nav>
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
                   <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default" onClick="location.href=index.html">Home</button>
+                    <button type="button" class="btn btn-default" onClick="location.href='index.html'">Home</button>
                   </div>
                   <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default" onClick="location.href=log.html">Log</button>
+                    <button type="button" class="btn btn-default" onClick="location.href='log.html'">Log</button>
                   </div>
                   <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default" onClick="location.href=about.html">About</button>
+                    <button type="button" class="btn btn-default" onClick="location.href='about.html'">About</button>
                   </div>
                 </div> 
             </nav>
             <hr>
             <div id="logDiv">
-                <iframe src="log.txt"></iframe>
+                <iframe id="logFrame" src="log.txt"></iframe>
             </div>
         </div>
     <script type="text/javascript">
         $(function ()
         {
-          var $mydiv = $('#logDiv');
-          $mydiv.scrollTop($mydiv.height());
+          $("#logFrame").contentWindow.scrollTo(0,99999);
         });
     </script>
     </body>
