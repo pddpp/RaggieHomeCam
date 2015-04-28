@@ -17,18 +17,20 @@
             <nav>
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
                   <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default">Home</button>
+                    <button type="button" class="btn btn-default" onClick="location.href=index.html">Home</button>
                   </div>
                   <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default">Log</button>
+                    <button type="button" class="btn btn-default" onClick="location.href=log.html">Log</button>
                   </div>
                   <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default">About</button>
+                    <button type="button" class="btn btn-default" onClick="location.href=about.html">About</button>
                   </div>
                 </div> 
             </nav>
             <hr>
-            <br>
+            <div>
+                <p id="selectedCommand" name= "selectedCommand" class="text-danger"></p>
+            </div>
             <div class="row">
                 <div class="col-md-8">
                   <img src="/?action=stream" class="img-rounded" style="max-width:100%;max-height:100%" alt="Stream Image Here" />
@@ -43,9 +45,9 @@
                     <div class="tab-pane active" id="auto">
                         <h1>Automated Houseworks</h1>
                         <div class="btn-group-vertical" role="group" aria-label="...">
-                          <button class="btn btn-large btn-danger">Clean Room</button>
-                          <button class="btn btn-large btn-primary">Scan Room</button>
-                          <button class="btn btn-large btn-success">Turn on Music</button>
+                          <button id="cleanRoom" name="cleanRoom" class="btn btn-large btn-danger" cellpadding="10">Clean Room</button>
+                          <button id="viewRoom" name="viewRoom" class="btn btn-large btn-primary" cellpadding="10">View Room</button>
+                          <button id="turnOnMusic" name="turnOnMusic" class="btn btn-large btn-success" cellpadding="10">Turn on Music</button>
                         </div>
                     </div>
                     <div class="tab-pane" id="manual-cam">
@@ -53,17 +55,17 @@
                         <table border="0" align="center" cellpadding="20">
                             <tr>
                                 <td></td>
-                                <td><img src="forward.png" class="btn btn-large" id="camUp"></td>
+                                <td><img id="camUp" name="camUp" src="forward.png" class="btn btn-large"></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td><img src="left.png" class="btn btn-large" id="camLeft"></td>
-                                <td><img src="stop.png" class="btn btn-large" id="camRst"></td>
-                                <td><img src="right.png" class="btn btn-large" id="camRight"></td>
+                                <td><img id="camLeft" name="camLeft" src="left.png" class="btn btn-large"></td>
+                                <td><img id="camRst" name="camRst" src="stop.png" class="btn btn-large"></td>
+                                <td><img id="camRight" name="camRight" src="right.png" class="btn btn-large"></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><img src="backward.png" class="btn btn-large" id="camDown"></td>
+                                <td><img id="camDown" name="camDown" src="backward.png" class="btn btn-large"></td>
                                 <td></td>
                             </tr>
                         </table>
@@ -73,17 +75,17 @@
                         <table border="0" align="center" cellpadding="20">
                             <tr>
                                 <td></td>
-                                <td><img src="forward.png" class="btn btn-large" id="forward"></td>
+                                <td><img id="forward" name="forward" src="forward.png" class="btn btn-large" id="forward"></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td><img src="left.png" class="btn btn-large" id="left"></td>
-                                <td><img src="stop.png" class="btn btn-large" id="stop"></td>
-                                <td><img src="right.png" class="btn btn-large" id="right"></td>
+                                <td><img id="left" name="left" src="left.png" class="btn btn-large"></td>
+                                <td><img id="stop" name="stop" src="stop.png" class="btn btn-large"></td>
+                                <td><img id="right" name="right" src="right.png" class="btn btn-large"></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td align="center"><button class="btn btn-large btn-inverse" id="clean">Clean</button></td>
+                                <td align="center"><button id="clean" name="clean" id="cleanRoom" name="cleanRoom" class="btn btn-large btn-inverse">Clean</button></td>
                                 <td></td>
                             </tr>
                         </table>
@@ -91,7 +93,29 @@
                 </div>
               </div>
             </div>
-        <footer>Copyright � Raggie.x24hr.com </footer>
+        <footer>Copyright: Raggie.x24hr.com </footer>
         </div>
+<script type="text/javascript">
+var actionNum="";
+$(function(){
+$("#cleanRoom").click(function(){
+    $('#selectedCommand').show().text("Clean Room Started..");
+    window.actionNum=1;
+});
+$(this).click(function(){
+   console.log("actionNum: "+actionNum);
+   
+    $.ajax({
+        data:{actNum: actionNum},
+        url:'process.php',
+        type:'POST',
+        success: function(response){
+            //alert("Salida: "+response );
+        }
+    });
+  });
+
+});
+</script>
     </body>
 </html>
