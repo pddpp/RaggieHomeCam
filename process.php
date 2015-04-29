@@ -2,7 +2,7 @@
 $actNum=$_POST['actNum'];
 switch ($actNum) {
     case 1:
-        exec('sudo python py/clean.py');
+        exec('python py/clean.py');
         break;
     case 2:
         exec('sudo python /var/www/control/py/izquierda.py');
