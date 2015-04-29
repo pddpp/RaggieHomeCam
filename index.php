@@ -32,7 +32,7 @@
             </div>
             <div class="row">
                 <div class="col-md-8">
-                  <img src="http://<?php echo $_SERVER['HTTP_HOST'];?>:8080/?action=stream" class="img-rounded" style="max-width:100%;max-height:100%" alt="Stream Image Here" />
+                  <img src="http://<?php echo $_SERVER['SERVER_NAME'];?>:8080/?action=stream" class="img-rounded" style="max-width:100%;max-height:100%" alt="Stream Image Here" />
               </div>
               <div class="col-md-4"><br>
                 <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
