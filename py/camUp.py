@@ -12,6 +12,7 @@ f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera up, current posV(0-
 #Write next vertical position of camera to arduino
 nxtPosV = max(int(curPosV)-3,0)
 value.put('posV',str(nxtPosV))
-if nxtPosV == 0: f.write("%Y-%m-%d %H:%M:%S", localtime())+": Camera can't go up more, posV is 0 \n")
+if nxtPosV == 0: 
+    f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera can't go up more, posV is 0. \n")
 
-f.write("%Y-%m-%d %H:%M:%S", localtime())+": Camera up, current posV(0-180) is %s. \n " % nxtPosV )
+f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera up, current posV(0-180) is %s. \n " % nxtPosV )
