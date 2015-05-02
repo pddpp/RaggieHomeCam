@@ -100,6 +100,9 @@ $(function(){
 $("#cleanRoom").click(function(){
     $('#selectedCommand').show().text("Clean Room Started..");
     window.actionNum=1;
+$("#camUp").click(function(){
+    $('#selectedCommand').show().text("Camera up 3 degree");
+    window.actionNum=2;
 });
 $(this).click(function(){
    console.log("actionNum: "+actionNum);

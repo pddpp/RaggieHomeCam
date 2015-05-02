@@ -5,7 +5,7 @@ switch ($actNum) {
         exec('python py/clean.py');
         break;
     case 2:
-        exec('sudo python /var/www/control/py/izquierda.py');
+        exec('python py/camUp.py');
         break;
     case 3:
         exec('sudo python /var/www/control/py/derecha.py');
