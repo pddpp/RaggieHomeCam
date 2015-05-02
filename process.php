@@ -16,7 +16,7 @@ switch ($actNum) {
     case 5:
         exec('python py/camRight.py');
         break;
-    default:
+    case 6:
         exec('python py/camRst.py');
         break;
 }
