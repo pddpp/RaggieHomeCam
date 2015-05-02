@@ -11,7 +11,7 @@ f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera turn left, current 
 
 #Write next vertical position of camera to arduino
 nxtPosH = max(int(curPosH)-6,0)
-value.put('posH',str(nxtPosH).zfill(3))
+client.put('posH',str(nxtPosH).zfill(3))
 if nxtPosH == 0: 
     f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera can't turn left more, posH is 0. \n")
 
