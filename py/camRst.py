@@ -13,6 +13,6 @@ f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Current posH(0-180) is %s;
 #Write next vertical position of camera to arduino
 nxtPosH = 90
 nxtPosV = 140
-value.put('posH',str(nxtPosH))
-value.put('posV',str(nxtPosV))
+value.put('posH',str(nxtPosH).zfill(3))
+value.put('posV',str(nxtPosV).zfill(3))
 f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Current posH(0-180) is %s; Current posV(0-180) is %s. \n " % (curPosH,curPosV) )
