@@ -2,7 +2,7 @@
 $actNum=$_POST['actNum'];
 switch ($actNum) {
     case 1:
-        exec('cat phpinfo.php > phpinfo.txt');
+        exec('python py/try.py');
         break;
     case 2:
         exec('sudo python /var/www/control/py/izquierda.py');
