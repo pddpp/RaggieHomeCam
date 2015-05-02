@@ -8,16 +8,16 @@ switch ($actNum) {
         exec('python py/camUp.py');
         break;
     case 3:
-        exec('sudo python /var/www/control/py/derecha.py');
+        exec('python py/camDown.py');
         break;
     case 4:
-        exec('sudo python /var/www/control/py/retrocede.py');
+        exec('python py/camLeft.py');
         break;
     case 5:
-        exec('sudo python /var/www/control/py/para.py');
+        exec('python py/camRight.py');
         break;
     default:
-        exec('sudo python /var/www/control/py/para.py');
+        exec('python py/camRst.py');
         break;
 }
 ?>
