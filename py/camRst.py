@@ -7,12 +7,12 @@ client = bridgeclient()
 curPosH = client.get('posH')
 curPosV = client.get('posV')
 #Write to log.html
-f = open("log.txt",'a')
-f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Current posH(0-180) is %s; Current posV(0-180) is %s. \n " % (curPosH,curPosV) )
+#f = open("log.txt",'a')
+#f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Current posH(0-180) is %s; Current posV(0-180) is %s. \n " % (curPosH,curPosV) )
 
 #Write next vertical position of camera to arduino
 nxtPosH = 90
 nxtPosV = 140
 client.put('posH',str(nxtPosH).zfill(3))
 client.put('posV',str(nxtPosV).zfill(3))
-f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Current posH(0-180) is %s; Current posV(0-180) is %s. \n " % (curPosH,curPosV) )
+#f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Current posH(0-180) is %s; Current posV(0-180) is %s. \n " % (curPosH,curPosV) )

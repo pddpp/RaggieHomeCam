@@ -7,12 +7,12 @@ client = bridgeclient()
 curPosH = client.get('posH')
 #Write to log.html
 f = open("log.txt",'a')
-f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera turn left, current posH(0-180) is %s. \n " % curPosH )
+#f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera turn left, current posH(0-180) is %s. \n " % curPosH )
 
 #Write next vertical position of camera to arduino
-nxtPosH = max(int(curPosH)-3,0)
+nxtPosH = max(int(curPosH)-8,0)
 client.put('posH',str(nxtPosH).zfill(3))
 if nxtPosH == 0: 
     f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera can't turn left more, posH is 0. \n")
 
-f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera turn left, current posH(0-180) is %s. \n " % nxtPosH )
+#f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera turn left, current posH(0-180) is %s. \n " % nxtPosH )
