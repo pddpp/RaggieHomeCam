@@ -10,7 +10,7 @@ f = open("log.txt",'a')
 f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera turn left, current posH(0-180) is %s. \n " % curPosH )
 
 #Write next vertical position of camera to arduino
-nxtPosH = max(int(curPosH)-3,30)
+nxtPosH = max(int(curPosH)-3,0)
 client.put('posH',str(nxtPosH).zfill(3))
 if nxtPosH == 0: 
     f.write(strftime("%Y-%m-%d %H:%M:%S", localtime())+": Camera can't turn left more, posH is 0. \n")
