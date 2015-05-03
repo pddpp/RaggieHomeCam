@@ -102,19 +102,19 @@ $("#cleanRoom").click(function(){
     window.actionNum=1;
 });
 $("#camUp").click(function(){
-    $('#selectedCommand').show().text("Camera up 3 degree");
+    $('#selectedCommand').show().text("Camera up 6 degree");
     window.actionNum=2;
 });
 $("#camDown").click(function(){
-    $('#selectedCommand').show().text("Camera down 3 degree");
+    $('#selectedCommand').show().text("Camera down 6 degree");
     window.actionNum=3;
 });
 $("#camLeft").click(function(){
-    $('#selectedCommand').show().text("Camera turn left 6 degree");
+    $('#selectedCommand').show().text("Camera turn left 15 degree");
     window.actionNum=4;
 });
 $("#camRight").click(function(){
-    $('#selectedCommand').show().text("Camera right 6 degree");
+    $('#selectedCommand').show().text("Camera right 15 degree");
     window.actionNum=5;
 });
 $("#camRst").click(function(){
