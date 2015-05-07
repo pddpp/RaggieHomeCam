@@ -126,19 +126,13 @@ $("#camRst").click(function(){
 });
 $("#turnOnLaser").click(function(){
     $('#selectedCommand').show().text("Laser toy is on");
-    $(#turnOffLaser).show();
-    $(this).hide();
-    window.actionNum=7;
-});
-$("#turnOnLaser").click(function(){
-    $('#selectedCommand').show().text("Laser toy is on");
-    $(#turnOffLaser).show();
+    $('#turnOffLaser').show();
     $(this).hide();
     window.actionNum=7;
 });
 $("#turnOffLaser").click(function(){
     $('#selectedCommand').show().text("Laser toy is off");
-    $(#turnOnLaser).show();
+    $('#turnOnLaser').show();
     $(this).hide();
     window.actionNum=8;
 });
