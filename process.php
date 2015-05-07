@@ -19,5 +19,11 @@ switch ($actNum) {
     case 6:
         exec('python py/camRst.py');
         break;
+    case 7:
+        exec('python py/laserOn.py');
+        break;
+    case 8:
+        exec('python py/laserOff.py');
+        break;
 }
 ?>
