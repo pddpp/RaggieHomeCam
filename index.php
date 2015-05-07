@@ -48,7 +48,8 @@
                         <div class="btn-group-vertical" role="group" aria-label="...">
                           <button id="cleanRoom" name="cleanRoom" class="btn btn-large btn-danger" cellpadding="10">Clean Room</button>
                           <button id="viewRoom" name="viewRoom" class="btn btn-large btn-primary" cellpadding="10">View Room</button>
-                          <button id="turnOnMusic" name="turnOnMusic" class="btn btn-large btn-success" cellpadding="10">Turn on Music</button>
+                          <button id="turnOnLaser" name="turnOnLaser" class="btn btn-large btn-success" cellpadding="10">Turn on Laser Toy</button> <!-- from http://jsfiddle.net/S4d6j/-->
+                          <button id="turnOffLaser" name="turnOffLaser" class="btn btn-large btn-warning" cellpadding="10" style="display:none;">Turn off Laser Toy</button>
                         </div>
                     </div>
                     <div class="tab-pane" id="manual-cam">
@@ -122,6 +123,24 @@ $("#camRight").click(function(){
 $("#camRst").click(function(){
     $('#selectedCommand').show().text("Camera position reset to central");
     window.actionNum=6;
+});
+$("#turnOnLaser").click(function(){
+    $('#selectedCommand').show().text("Laser toy is on");
+    $(#turnOffLaser).show();
+    $(this).hide();
+    window.actionNum=7;
+});
+$("#turnOnLaser").click(function(){
+    $('#selectedCommand').show().text("Laser toy is on");
+    $(#turnOffLaser).show();
+    $(this).hide();
+    window.actionNum=7;
+});
+$("#turnOffLaser").click(function(){
+    $('#selectedCommand').show().text("Laser toy is off");
+    $(#turnOnLaser).show();
+    $(this).hide();
+    window.actionNum=8;
 });
 $(this).click(function(){
    console.log("actionNum: "+actionNum);
