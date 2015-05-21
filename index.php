@@ -90,11 +90,13 @@
                                 <td align="center"><button id="clean" name="clean" class="btn btn-large btn-danger">  Clean  </button></td>
                                 <td></td>
                             </tr>
+                            <tr></tr>
                             <tr>
                                 <td></td>
-                                <td align="center"><button id="spot" name="spot" class="btn btn-large btn-primary">   Spot   </button></td>
+                                <td align="center"><button id="spot" name="spot" class="btn btn-large btn-primary">    Spot    </button></td>
                                 <td></td>
                             </tr>
+                            <tr></tr>
                             <tr>
                                 <td></td>
                                 <td align="center"><button id="dock" name="dock" class="btn btn-large btn-success">   Dock   </button></td>
