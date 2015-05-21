@@ -86,8 +86,8 @@
                                 <td><img id="right" name="right" src="right.png" class="btn btn-large"></td>
                             </tr>
                             <tr>
-                                <td align="center"><button id="clean" name="clean" class="btn btn-large btn-danger">  Clean  </button></td>
                                 <td align="center"><button id="spot" name="spot" class="btn btn-large btn-primary">    Spot    </button></td>
+                                <td align="center"><button id="clean" name="clean" class="btn btn-large btn-danger">  Clean  </button></td>
                                 <td align="center"><button id="dock" name="dock" class="btn btn-large btn-success">   Dock   </button></td>
                             </tr>
 
