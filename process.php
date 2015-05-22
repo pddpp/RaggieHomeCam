@@ -27,6 +27,6 @@ switch ($actNum) {
         break;
 }
 if ($actNum>10 and $actNum<20){
-    exec("python py/wheelCtl.py 12");
+    exec("python py/wheelCtl.py $actNum");
 }
 ?>
