@@ -87,7 +87,7 @@
                             </tr>
                             <tr>
                                 <td align="center"><button id="spot" name="spot" class="btn btn-large btn-primary">    Spot    </button></td>
-                                <td align="center"><button id="clean" name="clean" class="btn btn-large btn-danger">  Clean  </button></td>
+                                <td align="center"><button id="clean" name="clean" class="btn btn-large btn-danger">  Clean  </button></td>g
                                 <td align="center"><button id="dock" name="dock" class="btn btn-large btn-success">   Dock   </button></td>
                             </tr>
 
@@ -139,31 +139,31 @@ $("#turnOffLaser").click(function(){
 });
 $("#forward").click(function(){
     $('#selectedCommand').show().text("Robot going forward for 0.3 meter");
-    window.actionNum=9;
+    window.actionNum=14;
 });
 $("#left").click(function(){
     $('#selectedCommand').show().text("Robot turning left for 30 degree");
-    window.actionNum=10;
+    window.actionNum=15;
 });
 $("#stop").click(function(){
     $('#selectedCommand').show().text("Stopping current program on robot");
-    window.actionNum=11;
+    window.actionNum=16;
 });
 $("#right").click(function(){
     $('#selectedCommand').show().text("Robot turning right for 30 degree");
-    window.actionNum=12;
+    window.actionNum=17;
 });
 $("#clean").click(function(){
     $('#selectedCommand').show().text("Starting clean room program or pause current program");
-    window.actionNum=13;
+    window.actionNum=11;
 });
 $("#spot").click(function(){
     $('#selectedCommand').show().text("Starting dirt spot clean program");
-    window.actionNum=14;
+    window.actionNum=12;
 });
 $("#dock").click(function(){
     $('#selectedCommand').show().text("Robot going back home");
-    window.actionNum=15;
+    window.actionNum=13;
 });
 $(this).click(function(){
    console.log("actionNum: "+actionNum);

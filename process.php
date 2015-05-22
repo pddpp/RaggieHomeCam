@@ -26,4 +26,8 @@ switch ($actNum) {
         exec('python py/laserOff.py');
         break;
 }
+if ($actNum>10 and $actNum<20){
+    $cmdNum = actNum-10;
+    exec('python py/wheelCtl.py $cmdNum');
+}
 ?>
