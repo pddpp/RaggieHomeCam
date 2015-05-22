@@ -1,6 +1,6 @@
 from time import localtime, strftime
 import sys
-cmdNum = sys.argv[1]-10
+cmdNum = int(sys.argv[1])-10
 #sys.path.insert(0,'/usr/lib/python2.7/bridge')
 #from bridgeclient import BridgeClient as bridgeclient
 #client = bridgeclient()
