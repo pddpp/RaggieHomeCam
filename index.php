@@ -138,11 +138,11 @@ $("#turnOffLaser").click(function(){
     window.actionNum=8;
 });
 $("#forward").click(function(){
-    $('#selectedCommand').show().text("Robot going forward for 0.3 meter");
+    $('#selectedCommand').show().text("Robot going forward for 1 meter");
     window.actionNum=14;
 });
 $("#left").click(function(){
-    $('#selectedCommand').show().text("Robot turning left for 30 degree");
+    $('#selectedCommand').show().text("Robot turning left for 45 degree");
     window.actionNum=15;
 });
 $("#stop").click(function(){
@@ -150,7 +150,7 @@ $("#stop").click(function(){
     window.actionNum=16;
 });
 $("#right").click(function(){
-    $('#selectedCommand').show().text("Robot turning right for 30 degree");
+    $('#selectedCommand').show().text("Robot turning right for 45 degree");
     window.actionNum=17;
 });
 $("#clean").click(function(){
