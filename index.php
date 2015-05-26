@@ -147,7 +147,7 @@ $("#left").click(function(){
 });
 $("#stop").click(function(){
     $('#selectedCommand').show().text("Stopping current program on robot");
-    window.actionNum=16;
+    window.actionNum=11;
 });
 $("#right").click(function(){
     $('#selectedCommand').show().text("Robot turning right for 90 degree");
