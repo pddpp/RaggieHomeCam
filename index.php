@@ -77,7 +77,7 @@
                         <table border="0" align="center" cellpadding="20">
                             <tr>
                                 <td></td>
-                                <td><img id="forward" name="forward" src="forward.png" class="btn btn-large" id="forward"></td>
+                                <td><img id="forward" name="forward" src="backward.png" class="btn btn-large" id="forward"></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -103,7 +103,7 @@ var actionNum="";
 $(function(){
 $("#cleanRoom").click(function(){
     $('#selectedCommand').show().text("Clean Room Started..");
-    window.actionNum=1;
+    window.actionNum=11;
 });
 $("#camUp").click(function(){
     $('#selectedCommand').show().text("Camera up 6 degree");
@@ -142,7 +142,7 @@ $("#forward").click(function(){
     window.actionNum=14;
 });
 $("#left").click(function(){
-    $('#selectedCommand').show().text("Robot turning left for 45 degree");
+    $('#selectedCommand').show().text("Robot turning left for 90 degree");
     window.actionNum=15;
 });
 $("#stop").click(function(){
@@ -150,7 +150,7 @@ $("#stop").click(function(){
     window.actionNum=16;
 });
 $("#right").click(function(){
-    $('#selectedCommand').show().text("Robot turning right for 45 degree");
+    $('#selectedCommand').show().text("Robot turning right for 90 degree");
     window.actionNum=17;
 });
 $("#clean").click(function(){
