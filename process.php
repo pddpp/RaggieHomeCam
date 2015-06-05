@@ -29,4 +29,7 @@ switch ($actNum) {
 if ($actNum>10 and $actNum<20){
     exec("python py/wheelCtl.py $actNum");
 }
+if ($actNum>20 and $actNum<30){
+    exec("python py/switchCtl.py $actNum");
+}
 ?>

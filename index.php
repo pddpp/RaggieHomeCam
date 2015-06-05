@@ -47,8 +47,9 @@
                         <h1>Automated Houseworks</h1>
                         <div class="btn-group-vertical" role="group" aria-label="...">
                           <button id="cleanRoom" name="cleanRoom" class="btn btn-large btn-danger" cellpadding="10">Clean Room</button>
-                          <button id="viewRoom" name="viewRoom" class="btn btn-large btn-primary" cellpadding="10">View Room</button>
-                          <button id="turnOnLaser" name="turnOnLaser" class="btn btn-large btn-success" cellpadding="10">Turn on Laser Toy</button> <!-- from http://jsfiddle.net/S4d6j/-->
+                          <button id="turnOnLamp" name="turnOnLamp" class="btn btn-large btn-primary" cellpadding="10">Turn on Lamp</button>
+                          <button id="turnOffLamp" name="turnOffLamp" class="btn btn-large btn-warning" cellpadding="10">Turn on Lamp</button>
+                          <button id="turnOnLaser" name="turnOnLaser" class="btn btn-large btn-success" cellpadding="10" style="display:none;">Turn off Lamp</button> <!-- from http://jsfiddle.net/S4d6j/-->
                           <button id="turnOffLaser" name="turnOffLaser" class="btn btn-large btn-warning" cellpadding="10" style="display:none;">Turn off Laser Toy</button>
                         </div>
                     </div>
@@ -164,6 +165,18 @@ $("#spot").click(function(){
 $("#dock").click(function(){
     $('#selectedCommand').show().text("Robot going back home");
     window.actionNum=13;
+});
+$("#turnOnLamp").click(function(){
+    $('#selectedCommand').show().text("Lamp in the room is on");
+    $('#turnOffLamp').show();
+    $(this).hide();
+    window.actionNum=21;
+});
+$("#turnOffLamp").click(function(){
+    $('#selectedCommand').show().text("Lamp in the room is off");
+    $('#turnOnLamp').show();
+    $(this).hide();
+    window.actionNum=22;
 });
 $(this).click(function(){
    console.log("actionNum: "+actionNum);
