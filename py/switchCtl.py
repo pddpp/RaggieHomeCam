@@ -2,7 +2,7 @@ from time import localtime, strftime
 import sys
 cmdNum = int(sys.argv[1])-20
 print cmdNum
-swNum = "sw"+str(cmdNum/2)+"On"
+swNum = "sw"+str(cmdNum/2+1)+"On"
 swStatus = 'N' if cmdNum%2==0 else 'Y'
 print swNum+"   "+swStatus
 sys.path.insert(0,'/usr/lib/python2.7/bridge')
