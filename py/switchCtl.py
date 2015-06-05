@@ -1,7 +1,7 @@
 from time import localtime, strftime
 import sys
 cmdNum = int(sys.argv[1])-20
-swNum = "sw"+cmdNum/2+On
+swNum = "sw"+str(cmdNum/2)+"On"
 swStatus = 'N' if cmdNum%2==0 else 'Y'
 sys.path.insert(0,'/usr/lib/python2.7/bridge')
 from bridgeclient import BridgeClient as bridgeclient
