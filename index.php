@@ -48,8 +48,8 @@
                         <div class="btn-group-vertical" role="group" aria-label="...">
                           <button id="cleanRoom" name="cleanRoom" class="btn btn-large btn-danger" cellpadding="10">Clean Room</button>
                           <button id="turnOnLamp" name="turnOnLamp" class="btn btn-large btn-primary" cellpadding="10">Turn on Lamp</button>
-                          <button id="turnOffLamp" name="turnOffLamp" class="btn btn-large btn-warning" cellpadding="10">Turn off Lamp</button>
-                          <button id="turnOnLaser" name="turnOnLaser" class="btn btn-large btn-success" cellpadding="10" style="display:none;">Turn on Laser Toy</button> <!-- from http://jsfiddle.net/S4d6j/-->
+                          <button id="turnOffLamp" name="turnOffLamp" class="btn btn-large btn-warning" cellpadding="10"style="display:none;">Turn off Lamp</button>
+                          <button id="turnOnLaser" name="turnOnLaser" class="btn btn-large btn-success" cellpadding="10" >Turn on Laser Toy</button> <!-- from http://jsfiddle.net/S4d6j/-->
                           <button id="turnOffLaser" name="turnOffLaser" class="btn btn-large btn-warning" cellpadding="10" style="display:none;">Turn off Laser Toy</button>
                         </div>
                     </div>
