@@ -1,5 +1,5 @@
 # RaggieHomeCam
-## To my loving cat Raggie
+##         To my loving kitten Raggie
 A personal project with Arduino Yun microcontroller that implements a web site for controlling home camera and switches remotely.
 
 Hardware:
