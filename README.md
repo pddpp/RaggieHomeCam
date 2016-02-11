@@ -11,7 +11,7 @@ Hardware:
 
 Software:
 * Linux
-* php, js, html, css
+* php/js/html/css
 * c
 * python
 
